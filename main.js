@@ -1,23 +1,24 @@
-const { app, BrowserWindow } = require('electron')
 const path = require('path')
 const url = require('url')
+const { app, BrowserWindow } = require('electron')
 
 let mainWindow
 
-let dev = false
+let isDev = false
 
 if (
 	process.env.NODE_ENV !== undefined &&
 	process.env.NODE_ENV === 'development'
 ) {
-	dev = true
+	isDev = true
 }
 
-function createWindow() {
+function createMainWindow() {
 	mainWindow = new BrowserWindow({
-		width: 1024,
-		height: 768,
+		width: 1100,
+		height: 800,
 		show: false,
+		icon: './assets/icons/icon.png',
 		webPreferences: {
 			nodeIntegration: true,
 		},
@@ -25,7 +26,7 @@ function createWindow() {
 
 	let indexPath
 
-	if (dev && process.argv.indexOf('--noDevServer') === -1) {
+	if (isDev && process.argv.indexOf('--noDevServer') === -1) {
 		indexPath = url.format({
 			protocol: 'http:',
 			host: 'localhost:8080',
@@ -47,7 +48,7 @@ function createWindow() {
 		mainWindow.show()
 
 		// Open devtools if dev
-		if (dev) {
+		if (isDev) {
 			const {
 				default: installExtension,
 				REACT_DEVELOPER_TOOLS,
@@ -60,12 +61,10 @@ function createWindow() {
 		}
 	})
 
-	mainWindow.on('closed', function () {
-		mainWindow = null
-	})
+	mainWindow.on('closed', () => (mainWindow = null))
 }
 
-app.on('ready', createWindow)
+app.on('ready', createMainWindow)
 
 app.on('window-all-closed', () => {
 	if (process.platform !== 'darwin') {
@@ -75,7 +74,7 @@ app.on('window-all-closed', () => {
 
 app.on('activate', () => {
 	if (mainWindow === null) {
-		createWindow()
+		createMainWindow()
 	}
 })
 

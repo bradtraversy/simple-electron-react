@@ -1,5 +1,6 @@
 {
   "name": "simple-electron-react",
+  "productName": "React Electron App",
   "version": "1.0.0",
   "description": "Simple boilerplate for building Electron apps with React",
   "license": "MIT",
