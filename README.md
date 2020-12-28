@@ -1,74 +1,58 @@
-## Simple Electron React Boilerplate
+# Simple Electron React Boilerplate
 
 This is a based on a simple boilerplate using Electron and React. It is a customized version of [Alex Devero's](https://github.com/alexdevero/electron-react-webpack-boilerplate) repo and is used in my Electron course.
 
-### Install
+## Notes
 
-#### Clone this repo
+- Using [yarn](https://www.npmjs.com/package/yarn) instead of basic npm terminal commands
+- If getting a "404 index.html not found" error in development - check the host address in main.js
+- Uses [React-Bootstrap](https://react-bootstrap.github.io/) for styling
 
-```
-git clone https://github.com/bradtraversy/simple-electron-react.git
-```
+---
 
-#### Install dependencies
+## Install Advice
 
-```
-npm install
-```
+### Install dependencies
 
-or
-
-```
+```Bash
 yarn
 ```
 
-### Usage
+maybe also run:
 
-#### Run the app
-
-```
-npm run start
+```Bash
+yarn upgrade
 ```
 
-or
+---
 
-```
+## Usage
+
+### Run the app
+
+```Bash
 yarn start
 ```
 
-#### Build the app (automatic)
+### Build the app (automatic)
 
-```
-npm run package
-```
-
-or
-
-```
+```Bash
 yarn package
 ```
 
-#### Build the app (manual)
+### Build the app (manual)
 
-```
-npm run build
-```
-
-or
-
-```
+```Bash
 yarn build
 ```
 
-#### Test the app (after `npm run build` || `yarn run build`)
+### Test the app (after "yarn run build")
 
-```
-npm run prod
-```
-
-```
+```Bash
 yarn prod
 ```
+
+---
 
 ### Change app title
 
