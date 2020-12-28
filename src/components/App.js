@@ -7,21 +7,21 @@ const App = () => {
   const [logs, setLogs] = useState([
     // defaults
     {
-      id: 1,
+      _id: 1,
       text: "this is log one",
       priority: "low",
       user: "James",
       created: new Date().toString(),
     },
     {
-      id: 2,
+      _id: 2,
       text: "this is log two",
       priority: "medium",
       user: "Fiona",
       created: new Date().toString(),
     },
     {
-      id: 3,
+      _id: 3,
       text: "this is log three",
       priority: "high",
       user: "Brian",
@@ -43,7 +43,7 @@ const App = () => {
         </thead>
         <tbody>
           {logs.map((log) => (
-            <LogItem />
+            <LogItem key={log._id} log={log} />
           ))}
         </tbody>
       </Table>
