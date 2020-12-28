@@ -5,6 +5,9 @@ import LogItem from "./LogItem";
 import AddLogItem from "./AddLogItem";
 
 const App = () => {
+  /*******************************************************
+  Private Data
+  *******************************************************/
   const [logs, setLogs] = useState([
     // defaults
     {
@@ -30,9 +33,16 @@ const App = () => {
     },
   ]);
 
+  function addItem(item) {
+    console.log(item);
+  }
+
+  /*******************************************************
+  Output
+  *******************************************************/
   return (
     <Container>
-      <AddLogItem />
+      <AddLogItem addItem={addItem} />
       <Table>
         <thead>
           <tr>
