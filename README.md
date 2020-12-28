@@ -1,6 +1,6 @@
-## Bug Tracker Application
+## Simple Electron React Boilerplate
 
-This is a based on a simple boilerplate using Electron and React. It is a customized version of [Alex Devero's](https://github.com/alexdevero/electron-react-webpack-boilerplate) repo and is used in my Electron course
+This is a based on a simple boilerplate using Electron and React. It is a customized version of [Alex Devero's](https://github.com/alexdevero/electron-react-webpack-boilerplate) repo and is used in my Electron course.
 
 ### Install
 
