@@ -1,8 +1,8 @@
 {
-  "name": "simple-electron-react",
-  "productName": "React Electron App",
+  "name": "buglogger",
+  "productName": "BuggLogger",
   "version": "1.0.0",
-  "description": "Simple boilerplate for building Electron apps with React",
+  "description": "App bug tracker for teams",
   "license": "MIT",
   "engines": {
     "node": ">=9.0.0",
