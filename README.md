@@ -7,6 +7,7 @@ This is a based on a simple boilerplate using Electron and React. It is a custom
 - Using [yarn](https://www.npmjs.com/package/yarn) instead of basic npm terminal commands
 - If getting a "404 index.html not found" error in development - check the host address in main.js
 - Uses [React-Bootstrap](https://react-bootstrap.github.io/) for styling
+- Uses [Moment](https://momentjs.com/) and [React-Moment](https://github.com/headzoo/react-moment#readme) for formatting timestamps
 
 ---
 
