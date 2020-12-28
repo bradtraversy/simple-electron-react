@@ -44,10 +44,17 @@ const AddLogItem = () => {
                 onChange={(e) => setPriority(e.target.value)}
               >
                 <option value="0">Select Priority</option>
-                <option value="low">"Low"</option>
-                <option value="moderate">"Moderate"</option>
-                <option value="high">"High"</option>
+                <option value="low">Low</option>
+                <option value="moderate">Moderate</option>
+                <option value="high">High</option>
               </Form.Control>
+            </Col>
+          </Row>
+          <Row className="my-3">
+            <Col>
+              <Button type="submit" variant="secondary" block>
+                Add Log
+              </Button>
             </Col>
           </Row>
         </Form>
