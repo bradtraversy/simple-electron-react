@@ -23,10 +23,31 @@ const AddLogItem = () => {
           <Row className="my-3">
             <Col>
               <Form.Control
-                placeholder="log"
+                placeholder="Log"
                 value={text}
                 onChange={(e) => setText(e.target.value)}
               />
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <Form.Control
+                placeholder="User"
+                value={text}
+                onChange={(e) => setText(e.target.value)}
+              />
+            </Col>
+            <Col>
+              <Form.Control
+                as="select"
+                value={priority}
+                onChange={(e) => setPriority(e.target.value)}
+              >
+                <option value="0">Select Priority</option>
+                <option value="low">"Low"</option>
+                <option value="moderate">"Moderate"</option>
+                <option value="high">"High"</option>
+              </Form.Control>
             </Col>
           </Row>
         </Form>
