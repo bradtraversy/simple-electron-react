@@ -52,7 +52,7 @@ const AddLogItem = ({ addItem }) => {
               >
                 <option value="0">Select Priority</option>
                 <option value="low">Low</option>
-                <option value="moderate">Moderate</option>
+                <option value="medium">Medium</option>
                 <option value="high">High</option>
               </Form.Control>
             </Col>

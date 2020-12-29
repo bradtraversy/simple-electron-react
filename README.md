@@ -8,6 +8,7 @@ This is a based on a simple boilerplate using Electron and React. It is a custom
 - If getting a "404 index.html not found" error in development - check the host address in main.js
 - Uses [React-Bootstrap](https://react-bootstrap.github.io/) for styling
 - Uses [Moment](https://momentjs.com/) and [React-Moment](https://github.com/headzoo/react-moment#readme) for formatting timestamps
+- Uses [useState](https://reactjs.org/docs/hooks-state.html) React State Hooks to pass information between the UI App.js and the custom components we have created.
 
 ---
 
