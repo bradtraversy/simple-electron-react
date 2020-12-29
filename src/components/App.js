@@ -42,10 +42,19 @@ const App = () => {
 
   function addItem(item) {
     console.log(item);
-    item._id = Math.floor(Math.random() * 90000) + 10000;
-    item.created = new Date().toString();
-    setLogs([...logs, item]);
-    showAlert("Log Added");
+    if (item.text === "" || item.user === "" || item.priority === "") {
+      showAlert("Please Enter All Fields", "danger");
+    } else {
+      item._id = Math.floor(Math.random() * 90000) + 10000;
+      item.created = new Date().toString();
+      setLogs([...logs, item]);
+      showAlert("Log Added");
+    }
+  }
+
+  function deleteItem(_id) {
+    setLogs(logs.filter((item) => item._id != _id));
+    showAlert("Log Removed");
   }
 
   function showAlert(message, variant = "success", timeout = 3000) {
@@ -82,7 +91,7 @@ const App = () => {
         </thead>
         <tbody>
           {logs.map((log) => (
-            <LogItem key={log._id} log={log} />
+            <LogItem key={log._id} log={log} deleteItem={deleteItem} />
           ))}
         </tbody>
       </Table>

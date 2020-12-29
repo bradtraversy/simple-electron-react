@@ -10,6 +10,8 @@ This is a based on a simple boilerplate using Electron and React. It is a custom
 - Uses [Moment](https://momentjs.com/) and [React-Moment](https://github.com/headzoo/react-moment#readme) for formatting timestamps
 - Uses [useState](https://reactjs.org/docs/hooks-state.html) React State Hooks to pass information between the UI App.js and the custom components we have created.
 
+![UI Example](img/ui_example.jpg)
+
 ---
 
 ## Install Advice

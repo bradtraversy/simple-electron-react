@@ -16,9 +16,11 @@ const AddLogItem = ({ addItem }) => {
   const onSubmit = (e) => {
     e.preventDefault();
     addItem({ text, user, priority });
-    setText("");
-    setUser("");
-    setPriority("");
+    if (text !== "" && user !== "" && priority !== "") {
+      setText("");
+      setUser("");
+      setPriority("");
+    }
   };
   /*******************************************************
   Output

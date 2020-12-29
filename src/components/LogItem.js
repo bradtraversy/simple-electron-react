@@ -4,7 +4,10 @@ import Button from "react-bootstrap/Button";
 import Badge from "react-bootstrap/Badge";
 import Moment from "react-moment";
 
-const LogItem = ({ log: { _id, priority, user, text, created } }) => {
+const LogItem = ({
+  deleteItem,
+  log: { _id, priority, user, text, created },
+}) => {
   /*******************************************************
   Private Data
   *******************************************************/
@@ -34,7 +37,7 @@ const LogItem = ({ log: { _id, priority, user, text, created } }) => {
         <Moment format="MMMM Do YYYY, HH:mm:ss">{new Date(created)}</Moment>
       </td>
       <td>
-        <Button variant="danger" size="sm">
+        <Button variant="danger" size="sm" onClick={() => deleteItem(_id)}>
           x
         </Button>
       </td>
