@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Table from "react-bootstrap/Table";
+import Alert from "react-bootstrap/Alert";
 import LogItem from "./LogItem";
 import AddLogItem from "./AddLogItem";
 
@@ -33,6 +34,12 @@ const App = () => {
     },
   ]);
 
+  const [alert, setAlert] = useState({
+    show: false,
+    message: "",
+    variant: "success",
+  });
+
   function addItem(item) {
     console.log(item);
     item._id = Math.floor(Math.random() * 90000) + 10000;
@@ -46,6 +53,7 @@ const App = () => {
   return (
     <Container>
       <AddLogItem addItem={addItem} />
+      {alert.show && <Alert variant={alert.variant}>{alert.message}</Alert>}
       <Table>
         <thead>
           <tr>
