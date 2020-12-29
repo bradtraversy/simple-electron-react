@@ -45,6 +45,22 @@ const App = () => {
     item._id = Math.floor(Math.random() * 90000) + 10000;
     item.created = new Date().toString();
     setLogs([...logs, item]);
+    showAlert("Log Added");
+  }
+
+  function showAlert(message, variant = "success", timeout = 3000) {
+    setAlert({
+      show: true,
+      message,
+      variant,
+    });
+    setTimeout(() => {
+      setAlert({
+        show: false,
+        message: "",
+        variant: "success",
+      });
+    }, timeout);
   }
 
   /*******************************************************
